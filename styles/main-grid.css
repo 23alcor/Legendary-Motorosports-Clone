@@ -1,0 +1,35 @@
+.main-grid {
+  background-color: white;
+  height: 1000px;
+  margin-inline: 25px;
+  margin-top: -10px;
+  position: relative;
+}
+
+.sort-by-price-button {
+  position: absolute;
+  right: 20px;
+  top: -40px;
+  height: 35px;
+  width: 200px;
+}
+
+.sort-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px;
+  padding-top: 5px;
+  margin-inline: 20px;
+}
+
+.sort-button {
+  height: 40px;
+}
+
+.car-grid {
+  background-color: yellow;
+}
+
+.car-item {
+  
+}
