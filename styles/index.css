@@ -1,5 +1,29 @@
-body {
-  background-color: rgb(103, 9, 9);
-  margin: 0px;
+.background {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: repeating-linear-gradient(
+      45deg,
+      #781313, /* Dark red */
+      #781313 2px,
+      #8c1414 2px,
+      #8c1414 5px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      #781313, /* Dark red */
+      #781313 2px,
+      #8c1414 2px,
+      #8c1414 5px
+    );
+  background-blend-mode: multiply; /* Creates a blended look */
+  background-size: 10px 10px; /* Size of the checkered grid */
+  filter: blur(2p)
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

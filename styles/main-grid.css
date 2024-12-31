@@ -1,18 +1,38 @@
+
+
 .main-grid {
-  background-color: white;
+  background-color: rgb(29, 3, 1);
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(89	22	20	);
+  border-radius: 2px;
   height: 1000px;
-  margin-inline: 25px;
-  margin-top: -10px;
+  margin-inline: auto;
+  margin-top: -50px;
   position: relative;
+  max-width: 1000px;
 }
 
 .sort-by-price-button {
   position: absolute;
   right: 20px;
-  top: -40px;
-  height: 35px;
+  top: -45px;
+  height: 40px;
   width: 200px;
+  background: linear-gradient(to top, rgb(146, 19, 8), rgb(228, 31, 13));
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(141	33	24	);
+  border-radius: 4px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
 }
+
+.sort-by-price-button-text {
+  margin-top: 10px
+}
+
 
 .sort-grid {
   display: grid;
@@ -20,16 +40,115 @@
   gap: 5px;
   padding-top: 5px;
   margin-inline: 20px;
+  margin-bottom: 5px;
 }
 
 .sort-button {
   height: 40px;
+  background: linear-gradient(to top, rgb(146, 19, 8), rgb(228, 31, 13));
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(141	33	24	);
+  border-radius: 4px;
+  color: white;
 }
 
 .car-grid {
-  background-color: yellow;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+
 }
 
 .car-item {
+  margin-bottom: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(138, 138, 138);
+  border-radius: 1px;
+}
+
+.car-dlc {
+  display: flex;
+  background: linear-gradient(to bottom, rgb(240	240	237	), rgb(182, 182, 183));
+  justify-content: space-between;
+  height: 45px;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: rgb(138, 138, 138);
+}
+
+.car-dlc-text {
+  font-size: 14px;
+  font-family: sans-serif;
+  height: 30px;
+  margin: 0px;
+  margin-left: 5px;
+  padding: 5px;
+  padding-top: 6px;
+  width: 80%;
+  height: 100%;
+}
+
+.car-seat-image-container {
+  position: relative;
+  padding: 14px;
+}
+
+.car-seat-image-container-seat-number {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: rgb(120, 120, 120);
+  top: -2px;
+  right: 9px;
+}
+
+.car-seat-image {
+  height: 20px;
+  filter: brightness(0.5) contrast(1.5);/* Changes the image's colors */
+}
+
+
+.car-image{
+  width: 100%;
+  margin: 0;
+  margin-bottom: -5px;
+}
+
+.car-name-price {
+  background-color: black;
+  display: flex;
+  justify-content:space-between;
+  height: 30px;
+}
+
+.car-name {
+  display: flex;
+  margin: 0;
+  font-size: 13px;
+  font-family: sans-serif;
+  color: white;
+  width: 70%;
+  align-items: center;
+  padding-left: 8px;
   
+}
+
+.car-price {
+  background: linear-gradient(to top, rgb(146, 19, 8), rgb(228, 31, 13));
+  color: white;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: 10px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-left: 5px;
+  padding-top: 6px;
+  padding-right: 5px;
+  padding-bottom: 5px;
 }
