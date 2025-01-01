@@ -53,6 +53,11 @@
   color: white;
 }
 
+.sort-button.selected {
+  background: white;
+  color: black;
+}
+
 .car-grid {
   margin-left: 20px;
   margin-right: 20px;
