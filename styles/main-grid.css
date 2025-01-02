@@ -27,10 +27,26 @@
   color: white;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .sort-by-price-button-text {
   margin-top: 10px
+}
+
+.sort-by-price-button-image {
+  height: 20px;
+  transform: scale(2, .8);
+  margin-top: 8px;
+  width: 18px;
+}
+.sort-by-price-button-image.selected {
+  position: relative;
+  height: 10px;
+  width: 10px;
+  transform: scale(2, 1);
+  margin-top: 14px;
+  left: -4px;
 }
 
 
@@ -51,11 +67,13 @@
   border-color: rgb(141	33	24	);
   border-radius: 4px;
   color: white;
+  cursor: pointer;
 }
 
 .sort-button.selected {
   background: white;
   color: black;
+  cursor: pointer;
 }
 
 .car-grid {
@@ -65,6 +83,21 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Optional: slight slide effect */
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.car-item {
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 0.5s ease-in forwards; /* Animation duration and easing */
+  animation-delay: var(--fade-delay, 0s); /* Delay for staggered effect */
 }
 
 .car-item {
