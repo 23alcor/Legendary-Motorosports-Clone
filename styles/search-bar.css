@@ -1,14 +1,20 @@
-.search-bar {
+.search-bar-container-container{
   background-color: rgb(190, 190, 190);
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
   display: flex;
-  justify-content: space-around;
-  height: 30px;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
   z-index: 200;
+}
 
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  max-width: 1000px;
+  width: 100%;
 }
 
 .arrows-buttons {
@@ -60,6 +66,10 @@
   position: relative;
   width: 30px;
   min-width: 30px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: gray;
 }
 
 .time-button-clock {

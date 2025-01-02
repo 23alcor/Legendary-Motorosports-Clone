@@ -6,7 +6,7 @@
   max-height: 300px;
   width: 100%;
   object-fit: cover;
-  margin: 0px;
+  margin-inline: auto;
   padding: 0px;
   border-color: rgb(190, 5, 5);
   border-bottom-style: solid;
