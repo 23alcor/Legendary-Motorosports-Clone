@@ -2,35 +2,46 @@ import { carList } from "./cars.js";
 
 const audioHoverSelect = new Audio('./audio/phone/hover-select.mp3');
 const audioSelect = new Audio('./audio/phone/select.mp3')
+let filterPick = 'FEATURED';
+let carListFiltered = []
+let carListCopy = [...carList];
 
 const allButtons = document.querySelectorAll('button');
 
+// FOR BUTTON AUDIOS
 allButtons.forEach((button) => {
   button.addEventListener('mouseenter', () => {
     audioHoverSelect.currentTime = 0;
-    audioHoverSelect.play();
+    audioHoverSelect.play().catch((error) => {
+      console.warn("Unable to play hover audio due to browser restrictions:", error);
+    });
   });
   button.addEventListener('click', () => {
     audioSelect.currentTime = 0;
-    audioSelect.play();
+    audioSelect.play().catch((error) => {
+      console.warn("Unable to play hover audio due to browser restrictions:", error);
+    });
   });
 });
 
 
 
 // Buttons Code // Make Class
-
-let carListFiltered = []
 const buttonFilters = document.querySelectorAll('.js-sort-button');
 
+// CLICKING A SORTING BUTTON
 buttonFilters.forEach((button) => {
   button.addEventListener('click', () => {
+    // Reset sort by price
+    priceButtonImage.classList.remove('selected');
+    priceButtonImage.src = './images/icons/dash.webp'
+
     buttonFilters.forEach((btn) => {
       btn.classList.remove('selected');
     });
     button.classList.add('selected');
-    const filterPick = button.dataset.id;
-    render(filterPick);
+    filterPick = button.dataset.id;
+    render(filterPick, carList);
   });
 });
 
@@ -38,32 +49,37 @@ const priceButton = document.querySelector('.js-sort-by-price-button')
 const priceButtonImage = document.querySelector('.js-sort-by-price-button-image')
 
 
+// FOR CLICKING SORT BY PRICE
 priceButton.addEventListener('click', () => {
   if (!priceButtonImage.classList.contains('selected')){
     priceButtonImage.classList.add('selected');
   }
+  
+  // FOR DESC TO ASC
   if (priceButtonImage.src.includes('price-arrow-down.png')) {
     priceButtonImage.src = './images/icons/price-arrow-up.png';
-  } else {
+    carListCopy.sort((a, b) => a.price - b.price);
+    render(filterPick, carListCopy);
+  } 
+  
+  // FOR ASC TO DESC
+  else {
     priceButtonImage.src = './images/icons/price-arrow-down.png';
+    render(filterPick, carList)
+    carListCopy.sort((a, b) => b.price - a.price);
+    render(filterPick, carListCopy);
   }
 });
 
 buttonFilters[0].classList.add('selected');
-render('FEATURED')
+render('FEATURED', carList)
 
 
-function render(filterPick) {
-
-  // Reset the sort button
-  priceButtonImage.classList.remove('selected');
-  priceButtonImage.src = './images/icons/dash.webp'
-
-
+function render(filterPick, carArray) {
   document.querySelector('.js-car-grid').innerHTML = '';
-  carListFiltered = carList.filter((car) => car.categories.includes(filterPick));
+  let carArrayFiltered = carArray.filter((car) => car.categories.includes(filterPick));
   let html = ''; 
-  carListFiltered.forEach((car, index) => {
+  carArrayFiltered.forEach((car, index) => {
   html = `
     <div class="car-item" style="--fade-delay: ${index * 0.1}s;">
       <div class="car-dlc">
@@ -77,11 +93,10 @@ function render(filterPick) {
   
       <div class="car-name-price">
         <p class="car-name">${car.name}</p>
-        <p class="car-price">$${car.price}</p>
+        <p class="car-price">$${car.price.toLocaleString()}</p>
       </div>
     </div>
   `;
-  console.log('hello');   
   document.querySelector('.js-car-grid').innerHTML += html;
   })
   

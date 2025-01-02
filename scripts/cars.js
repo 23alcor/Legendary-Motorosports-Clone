@@ -6,7 +6,7 @@ class CarObject {
     this.dlc = dlc;
     this.seats = seats;
     this.image = `../images/cars/${image}.png`;
-    this.price = price.toLocaleString();
+    this.price = price;
     this.categories = categories;
   }
 }
