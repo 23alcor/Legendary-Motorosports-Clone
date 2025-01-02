@@ -1,0 +1,177 @@
+.main-container {
+  background-color: rgb(29, 3, 1);
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(89	22	20	);
+  border-radius: 2px;
+  height: auto;
+  margin-inline: auto;
+  margin-top: -100px;
+  position: relative;
+  max-width: 1000px;
+}
+
+.main-container-header {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-name {
+  width: 100%;
+  display: flex;
+}
+
+.header-name-logo {
+  width: 100px;
+}
+
+.header-name-text {
+  width: 100%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+.header-price {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-right: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 24px
+}
+
+.main-container-body {
+  max-height: 1000px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.body-main {
+  width: 40%;
+  margin-left: 10px;
+}
+
+.body-para {
+  min-height: 325px;
+  color: white;
+  font-size: 14px
+}
+
+.body-colors {
+  height: 200px;
+}
+
+.colors-title {
+  
+  height: 60px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.colors {
+  height: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.color {
+  border-style: solid;
+  border-radius: 50%;
+  padding: 20px;
+  border-width: 0px;
+}
+
+.red {
+  background-color: red;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.gold {
+  background-color: gold;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+}
+
+.body-stats {
+  background-color: cornflowerblue;
+  height: 250px;
+}
+
+.body-pictures {
+  width: 60%;
+}
+
+.image1 {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.pictures {
+  height: 600px;
+  margin-inline: 10px;
+}
+
+.picture1 {
+  background-color: darkblue;
+  height: 55%;
+}
+
+.picture23 {
+  height: 45%;
+  display: flex;
+  margin-top: 10px;
+}
+
+.picture2 {
+  background-color: blueviolet;
+  width: 50%;
+  margin-right: 5px;
+}
+
+.image2,
+.image3 {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+} 
+
+.picture3 {
+  background-color: aqua;
+  width: 50%;
+  margin-left: 5px;
+}

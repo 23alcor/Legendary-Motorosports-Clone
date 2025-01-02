@@ -30,6 +30,10 @@
   cursor: pointer;
 }
 
+.sort-by-price-button:hover {
+  background: linear-gradient(to top, rgb(228, 31, 13), rgb(146, 19, 8));
+}
+
 .sort-by-price-button-text {
   margin-top: 10px
 }
@@ -70,6 +74,10 @@
   cursor: pointer;
 }
 
+.sort-button:hover {
+  background: linear-gradient(to top, rgb(228, 31, 13), rgb(146, 19, 8));
+}
+
 .sort-button.selected {
   background: white;
   color: black;
@@ -98,6 +106,7 @@
   opacity: 0; /* Initially hidden */
   animation: fadeIn 0.5s ease-in forwards; /* Animation duration and easing */
   animation-delay: var(--fade-delay, 0s); /* Delay for staggered effect */
+  cursor: pointer;
 }
 
 .car-item {
