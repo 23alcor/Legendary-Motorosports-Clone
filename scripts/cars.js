@@ -5,7 +5,7 @@ class CarObject {
     this.name = name;
     this.dlc = dlc;
     this.seats = seats;
-    this.image = `./images/cars/${image}.png`;
+    this.image = `images/cars/${image}.png`;
     this.price = price;
     this.categories = categories;
   }
