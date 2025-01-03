@@ -24,8 +24,6 @@ allButtons.forEach((button) => {
   });
 });
 
-
-
 // Buttons Code // Make Class
 const buttonFilters = document.querySelectorAll('.js-sort-button');
 
@@ -81,15 +79,15 @@ function render(filterPick, carArray) {
   let html = ''; 
   carArrayFiltered.forEach((car, index) => {
   html = `
-    <div class="car-item" style="--fade-delay: ${index * 0.1}s;">
+    <div class="car-item" data-id="${car.id}" style="--fade-delay: ${index * 0.1}s;">
       <div class="car-dlc">
         <p class="car-dlc-text">${car.dlc}</p>
         <div class="car-seat-image-container">
           <p class="car-seat-image-container-seat-number">${car.seats}</p>
-          <img class="car-seat-image" src="images/icons/person-icon.png" alt="car-seats">
+          <img class="car-seat-image" src="images/icons/person-icon.png" alt="car-seats" draggable = false>
         </div>
       </div>
-      <img class="car-image" src="${car.image}" alt="car-image1">
+      <img class="car-image" src="${car.image}" alt="car-image1" draggable = false>
   
       <div class="car-name-price">
         <p class="car-name">${car.name}</p>
@@ -99,9 +97,39 @@ function render(filterPick, carArray) {
   `;
   document.querySelector('.js-car-grid').innerHTML += html;
   })
-  
-  
+  const carPreviews = document.querySelectorAll('.car-item');
+  // For Car Item Audios
+  carPreviews.forEach((item) => {
+    item.addEventListener('mouseenter', () => {
+      audioHoverSelect.currentTime = 0;
+      audioHoverSelect.play().catch((error) => {
+        console.warn("Unable to play hover audio due to browser restrictions:", error);
+      });
+    });
+    item.addEventListener('click', () => {
+      audioSelect.currentTime = 0;
+      audioSelect.play().catch((error) => {
+        console.warn("Unable to play hover audio due to browser restrictions:", error);
+      });
+    });
+  });
 
+  // For getting new page
+  carPreviews.forEach((item) => {
+    item.addEventListener(('click'), () => {
+      //window.location = 'carPage.html';
+      const id = item.dataset.id;
+      let car;
+      console.log(id);
+      carList.forEach((carItem) => {
+        if (carItem.id == id) {
+          console.log(carItem.id);
+          car = carItem;
+        }
+      });
+      sessionStorage.setItem('carFocus', JSON.stringify(car));
+    });
+  });
 }  
 
 

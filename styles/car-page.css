@@ -24,6 +24,7 @@
 
 .header-name-logo {
   width: 100px;
+  padding: 5px;
 }
 
 .header-name-text {
@@ -144,6 +145,15 @@
   background-color: white;
   margin-inline: 2px;
   height: 6px;
+}
+
+.bar.unselected {
+  background-color: rgb(78, 78, 78);
+}
+
+.progressing {
+  background-color: white;
+  height: 100%;
 }
 
 .body-order-button {
