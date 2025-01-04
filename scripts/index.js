@@ -128,9 +128,7 @@ function render(filterPick, carArray) {
         }
       });
       sessionStorage.setItem('carFocus', JSON.stringify(car));
+      window.location = 'carPage.html';
     });
   });
-}  
-
-
-
+} 

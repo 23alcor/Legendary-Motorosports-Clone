@@ -1,12 +1,19 @@
 import { carList } from "./cars.js";
 
-const carFocus = JSON.parse(sessionStorage.getItem('carFocus'));
-renderSite(carList[6])
+//const carFocus = JSON.parse(sessionStorage.getItem('carFocus'));
+
+const carFocus = carList[0];
+
+
+
+
+renderSite(carFocus);
+
 
 function renderBars(rating) {
   if (rating > 5 || rating < 0) {
     console.log("Needs a number between 0 and 5")
-    return
+    return 
   }
   const roundRating = Math.floor(rating);
   const roundDecimal = (rating * 10 - Math.floor(rating) * 10) * 10;
@@ -27,11 +34,9 @@ function renderStats(carFocus, statName) {
   `;
 
   const statBars = document.querySelector(`.js-stat-bar-${statName}`);
-  // Traction bar
   let statBar = renderBars(carFocus.stats[statName]);
   for (let i = 0; i < statBar[0]; i++){
     statBars.innerHTML += `<div class='bar'></div>`
-    console.log('helloo')
   }   
   if (statBar[0] !== 5) {
   statBars.innerHTML += `<div class='bar unselected'>
@@ -40,9 +45,9 @@ function renderStats(carFocus, statName) {
   for (let i = 0; i < 4 - statBar[0]; i++){
     statBars.innerHTML += `<div class='bar unselected'></div>`
   }
-  }
   const progressingBar = document.getElementById(`progressdiv-${statName}`);
   progressingBar.style.width = `${statBar[1]}%`;
+  }
 }
 
 function renderSite(carFocus) {
@@ -67,8 +72,8 @@ function renderSite(carFocus) {
           </div>
           <div class="body-colors">
             <div class="colors-title">SELECT FROM AVAILABLE COLORS TO ORDER</div>
-            <div class="colors">
-              <div class="color red"></div>
+            <div class="colors js-colors">
+              <div class="color red js-color"></div>
               <div class="color pink"></div>
               <div class="color yellow"></div>
               <div class="color gold"></div>
@@ -110,4 +115,16 @@ function renderSite(carFocus) {
   renderStats(carFocus, 'braking');
   renderStats(carFocus, 'traction');
 
-}
+  const colors = document.querySelectorAll('.color');
+  console.log(colors);
+  colors.forEach((color) => {
+    color.addEventListener('click', () => {
+      colors.forEach((clr) => {
+        clr.classList.remove('selected');
+      });
+      color.classList.add('selected');
+      console.log('rednerd');
+    });
+  });
+  
+} 
