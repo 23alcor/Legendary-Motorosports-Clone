@@ -93,7 +93,7 @@ function renderSite(carFocus) {
             <div class="body-stats-sheet js-body-stats-sheet">
               
             </div>
-            <button class="body-order-button unready">ORDER</button>
+            <button class="body-order-button unready js-order-button">ORDER</button>
           </div>
         </div>
         <div class="body-pictures">
@@ -172,6 +172,52 @@ function renderSite(carFocus) {
         console.warn("Unable to play hover audio due to browser restrictions:", error);
       });
     });
+  });
+
+  const orderCarButton = document.querySelector('.js-order-button');
+  orderCarButton.addEventListener('click', () => {
+    if (!orderCarButton.classList.contains('unready')) {
+      mainContainer.innerHTML = `
+        <div class="order-header">
+          <div class="header-name">
+            <div class="header-name-logo">
+              <img class="logo" src="${carFocus.logo}" alt="">
+            </div>
+            <div class="header-name-text">
+              <p>${carFocus.name}</p>
+            </div>
+          </div>
+        </div>
+        <div class="order-screen">
+          <div class="body-pictures">
+            <div class="pictures">
+              <div class="picture1">
+                <img class="image1" src="${carFocus.image}" alt="">
+              </div>
+              <div class="picture23">
+                <div class="picture2">
+                  <img class="image2" src="${carFocus.image1}" alt="">
+                </div>
+                <div class="picture3">
+                  <img class="image3" src="${carFocus.image2}" alt="">
+                </div>
+                </div>
+              </div>
+            </div>
+          <div class="order-text js-order-text">Order Processing...</div>
+        </div>
+      `;
+
+      setTimeout(() => {
+        const orderText = document.querySelector('.js-order-text');
+        orderText.innerHTML = `
+          <p style="font-size: 24px; margin-top: 0px;">NOT SOLD</p>
+          <p style="font-size: 20px; margin-bottom: -5px;">Purchase Failed</p>
+          <p>Insufficient funds.</p>
+        `;
+      }, 2500)
+    }
+    
   });
   
 } 
