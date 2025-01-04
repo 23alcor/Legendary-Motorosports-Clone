@@ -6,11 +6,12 @@
   border-width: 2px;
   border-color: rgb(89	22	20	);
   border-radius: 2px;
-  height: 1000px;
+  height: auto;
   margin-inline: auto;
   margin-top: -50px;
   position: relative;
   max-width: 1000px;
+  padding-bottom: 50px;
 }
 
 .sort-by-price-button {

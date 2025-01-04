@@ -1,8 +1,8 @@
 import { carList } from "./cars.js";
 
-//const carFocus = JSON.parse(sessionStorage.getItem('carFocus'));
+const carFocus = JSON.parse(sessionStorage.getItem('carFocus'));
 
-const carFocus = carList[0];
+//const carFocus = carList[0];
 
 const audioHoverSelect = new Audio('./audio/phone/hover-select.mp3');
 const audioSelect = new Audio('./audio/phone/select.mp3')
@@ -110,6 +110,21 @@ function renderSite(carFocus) {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="main-grid">
+        <button class="sort-by-price-button js-sort-by-price-button">
+          <p class="sort-by-price-button-text" >Sort by Price</p>
+          <img class="sort-by-price-button-image js-sort-by-price-button-image" src="images/icons/dash.webp" alt="" draggable = false>
+        </button>
+        <div class="sort-grid">
+          <button class="sort-button js-sort-button" data-id="FEATURED">FEATURED</button>
+          <button class="sort-button js-sort-button" data-id="DOOR2">2 DOOR</button>
+          <button class="sort-button js-sort-button" data-id="DOOR4">4 DOOR</button>
+          <button class="sort-button js-sort-button" data-id="MOTORCYCLES">MOTORCYCLES</button>
+          <button class="sort-button js-sort-button" data-id="SPECIAL">SPECIAL</button>
+        </div>
+        <div class="car-grid js-car-grid">
         </div>
       </div>
   `;

@@ -1,3 +1,5 @@
+
+
 .main-container {
   background-color: rgb(29, 3, 1);
   border-style: solid;
@@ -57,6 +59,11 @@
   display: flex;
   justify-content: space-between;
   margin-top: 5px;
+  padding-bottom: 50px;
+}
+
+.main-grid {
+  border-width: 0px;
 }
 
 .body-main {
