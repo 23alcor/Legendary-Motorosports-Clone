@@ -79,7 +79,7 @@ function render(filterPick, carArray) {
   let html = ''; 
   carArrayFiltered.forEach((car, index) => {
   html = `
-    <div class="car-item" data-id="${car.id}" style="--fade-delay: ${index * 0.1}s;">
+    <div class="car-item" data-id="${car.id}" style="--fade-delay: ${index * 0.05}s;">
       <div class="car-dlc">
         <p class="car-dlc-text">${car.dlc}</p>
         <div class="car-seat-image-container">

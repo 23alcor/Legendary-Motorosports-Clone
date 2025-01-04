@@ -1,9 +1,21 @@
 .header {
-  
+  position: relative;
+}
+
+.legendary-text {
+  position: absolute;
+  top: 80px;
+  left: 50px;
+  font-size: 85px;
+  font-family: Parisienne;
+  font-weight: bold;
+  background: linear-gradient(to top, rgb(114, 114, 114), rgb(255, 255, 255)); /* Bottom to top gradient */
+  -webkit-background-clip: text; /* Clip gradient to the text */
+  -webkit-text-fill-color: transparent;
 }
 
 .header-image {
-  max-height: 300px;
+  max-height: 350px;
   width: 100%;
   object-fit: cover;
   margin-inline: auto;
@@ -11,4 +23,5 @@
   border-color: rgb(190, 5, 5);
   border-bottom-style: solid;
   border-width: 3px;
+  object-position: center 90%;
 }
