@@ -201,10 +201,13 @@
 }
 
 
-
-
-
-
+.footer {
+  background-color: black;
+  height: 100px;
+  border-top-style: solid;
+  border-width: 5px;
+  border-color: red;
+}
 
 
 .body-pictures {
