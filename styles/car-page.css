@@ -179,6 +179,16 @@
   margin-top: 5px
 }
 
+.body-order-button.unready {
+  background: linear-gradient(to top, rgb(55, 8, 3), rgb(103, 17, 9));
+  color: rgb(134, 134, 134);
+  cursor:default
+}
+.body-order-button.unready:hover {
+  background: linear-gradient(to top, rgb(55, 8, 3), rgb(103, 17, 9));
+  color: rgb(134, 134, 134);
+}
+
 .body-order-button:hover {
   background: linear-gradient(to top, rgb(228, 31, 13), rgb(146, 19, 8));
 }
@@ -234,3 +244,4 @@
   width: 50%;
   margin-left: 5px;
 }
+

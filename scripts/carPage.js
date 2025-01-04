@@ -4,6 +4,9 @@ import { carList } from "./cars.js";
 
 const carFocus = carList[0];
 
+const audioHoverSelect = new Audio('./audio/phone/hover-select.mp3');
+const audioSelect = new Audio('./audio/phone/select.mp3')
+
 
 
 
@@ -90,7 +93,7 @@ function renderSite(carFocus) {
             <div class="body-stats-sheet js-body-stats-sheet">
               
             </div>
-            <button class="body-order-button">ORDER</button>
+            <button class="body-order-button unready">ORDER</button>
           </div>
         </div>
         <div class="body-pictures">
@@ -115,15 +118,44 @@ function renderSite(carFocus) {
   renderStats(carFocus, 'braking');
   renderStats(carFocus, 'traction');
 
+  const orderButton = document.querySelector('.body-order-button');
   const colors = document.querySelectorAll('.color');
   console.log(colors);
   colors.forEach((color) => {
     color.addEventListener('click', () => {
+      audioSelect.currentTime = 0;
+      audioSelect.play().catch((error) => {
+        console.warn("Unable to play hover audio due to browser restrictions:", error);
+      });
+      orderButton.classList.remove('unready');
       colors.forEach((clr) => {
         clr.classList.remove('selected');
       });
       color.classList.add('selected');
       console.log('rednerd');
+    });
+    color.addEventListener('mouseenter', () => {
+      audioHoverSelect.currentTime = 0;
+      audioHoverSelect.play().catch((error) => {
+        console.warn("Unable to play hover audio due to browser restrictions:", error);
+      });
+    });
+  });
+
+  const allButtons = document.querySelectorAll('button');
+
+  allButtons.forEach((button) => {
+    button.addEventListener('mouseenter', () => {
+      audioHoverSelect.currentTime = 0;
+      audioHoverSelect.play().catch((error) => {
+        console.warn("Unable to play hover audio due to browser restrictions:", error);
+      });
+    });
+    button.addEventListener('click', () => {
+      audioSelect.currentTime = 0;
+      audioSelect.play().catch((error) => {
+        console.warn("Unable to play hover audio due to browser restrictions:", error);
+      });
     });
   });
   
