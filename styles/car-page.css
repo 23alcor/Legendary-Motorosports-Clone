@@ -234,6 +234,7 @@
   height: 45%;
   display: flex;
   margin-top: 10px;
+  position: relative;
 }
 
 .picture2 {
@@ -261,6 +262,12 @@
 
 .header-name-text {
   font-size: 30px;
+}
+
+.order-color {
+  position: absolute;
+  top: 120px;
+  left: 30px;
 }
 
 .order-screen {

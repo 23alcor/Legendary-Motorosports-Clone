@@ -76,14 +76,14 @@ function renderSite(carFocus) {
           <div class="body-colors">
             <div class="colors-title">SELECT FROM AVAILABLE COLORS TO ORDER</div>
             <div class="colors js-colors">
-              <div class="color red js-color"></div>
-              <div class="color pink"></div>
-              <div class="color yellow"></div>
-              <div class="color gold"></div>
-              <div class="color green"></div>
-              <div class="color blue"></div>
-              <div class="color black"></div>
-              <div class="color white"></div>
+              <div data-id='red' class="color red"></div>
+              <div data-id='pink' class="color pink"></div>
+              <div data-id='yellow' class="color yellow"></div>
+              <div data-id='gold' class="color gold"></div>
+              <div data-id='green' class="color green"></div>
+              <div data-id='blue' class="color blue"></div>
+              <div data-id='black' class="color black"></div>
+              <div data-id='white' class="color white"></div>
             </div>
           </div>
           <div class="body-stats">
@@ -193,6 +193,7 @@ function renderSite(carFocus) {
             <div class="pictures">
               <div class="picture1">
                 <img class="image1" src="${carFocus.image}" alt="">
+                <div class="color order-color js-order-color"></div>
               </div>
               <div class="picture23">
                 <div class="picture2">
@@ -207,6 +208,15 @@ function renderSite(carFocus) {
           <div class="order-text js-order-text">Order Processing...</div>
         </div>
       `;
+
+      let colorSelected;
+      const orderColor = document.querySelector('.js-order-color');
+      colors.forEach((clrrt) => {
+        if (clrrt.classList.contains('selected')) {
+          colorSelected = clrrt.dataset.id;
+        }
+      });
+      orderColor.classList.add(colorSelected);
 
       setTimeout(() => {
         const orderText = document.querySelector('.js-order-text');
