@@ -1,4 +1,54 @@
+.legendary-text-container {
+  position: absolute;
+  background-color: yellow;
+  right: 36%;
+  top: -5%;
+  width: 1000px;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
+}
+
+.legendary-legendary {
+  font-family: Parisienne;
+  font-weight: bold;
+  position: absolute;
+  top: -40px;
+  font-size:120px;
+  display: flex;
+  background: linear-gradient(to top, rgb(255, 255, 255), rgb(53, 34, 104), rgb(235, 235, 235), rgb(255, 255, 255), rgb(136, 136, 238));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.legendary-legendary-l {
+  transform: rotate(8deg);
+  font-weight: 450;
+  font-family: Kalam;
+  margin-top: 110px;
+  background: linear-gradient(to top, rgb(255, 255, 255), rgb(53, 34, 104), rgb(235, 235, 235), rgb(255, 255, 255), rgb(136, 136, 238));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.legendary-motorsport {
+  position: absolute;
+  font-size: 40px;
+  font-family: Figtree;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: -440px;
+  margin-left: 70px;
+  color: rgb(148, 25, 25);
+  text-shadow: 
+  -1px -1px rgba(0, 0, 0, 4),  /* Top-left */
+  1px -1px rgba(0, 0, 0, 4),   /* Top-right */
+  -1px 1px rgba(0, 0, 0, 4),   /* Bottom-left */
+  1px 1px rgba(0, 0, 0, 4); 
+}
 
 .main-container {
   background-color: rgb(29, 3, 1);
