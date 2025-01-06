@@ -73,8 +73,12 @@
 
 .body-para {
   min-height: 325px;
-  color: white;
-  font-size: 14px
+  color: rgb(211, 211, 211);
+  font-size: 16px;
+  font-family: Helvetica;
+  line-height: 1.5;
+  border-radius: 20px;
+  padding-bottom: 60px;
 }
 
 .body-colors {

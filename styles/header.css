@@ -2,20 +2,61 @@
   position: relative;
 }
 
-.legendary-text {
+.legendary-text-container {
   position: absolute;
-  top: 80px;
-  left: 50px;
-  font-size: 85px;
+  background-color: yellow;
+  right: 36%;
+  top: -5%;
+  width: 1000px;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.legendary-legendary {
   font-family: Parisienne;
   font-weight: bold;
-  background: linear-gradient(to top, rgb(114, 114, 114), rgb(255, 255, 255)); /* Bottom to top gradient */
-  -webkit-background-clip: text; /* Clip gradient to the text */
+  position: absolute;
+  top: -40px;
+  font-size:120px;
+  display: flex;
+  background: linear-gradient(to top, rgb(255, 255, 255), rgb(53, 34, 104), rgb(235, 235, 235), rgb(255, 255, 255), rgb(136, 136, 238));
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.legendary-legendary-l {
+  transform: rotate(8deg);
+  font-weight: 450;
+  font-family: Kalam;
+  margin-top: 110px;
+  background: linear-gradient(to top, rgb(255, 255, 255), rgb(53, 34, 104), rgb(235, 235, 235), rgb(255, 255, 255), rgb(136, 136, 238));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.legendary-motorsport {
+  position: absolute;
+  font-size: 40px;
+  font-family: Figtree;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: -440px;
+  margin-left: 70px;
+  color: rgb(148, 25, 25);
+  text-shadow: 
+  -1px -1px rgba(0, 0, 0, 4),  /* Top-left */
+  1px -1px rgba(0, 0, 0, 4),   /* Top-right */
+  -1px 1px rgba(0, 0, 0, 4),   /* Bottom-left */
+  1px 1px rgba(0, 0, 0, 4); 
+}
+
+
 .header-image {
-  max-height: 350px;
+  max-height: 400px; 
   width: 100%;
   object-fit: cover;
   margin-inline: auto;
@@ -23,5 +64,110 @@
   border-color: rgb(190, 5, 5);
   border-bottom-style: solid;
   border-width: 3px;
-  object-position: center 90%;
+  object-position: center;
 }
+
+.choose-container{
+  position: absolute;
+  text-shadow: 
+  -1px -1px black,
+  1px -1px black,
+  -1px 1px black,
+  1px 1px black
+  ;
+  color: rgb(148, 25, 25);
+  font-family: 'ARIAL';
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: -530px;
+  margin-left: 540px;
+  width: 100%;
+  letter-spacing: 0px;
+}
+
+.high-per {
+  position: absolute;
+  color: white;
+  font-family: 'Arial';
+  font-weight: 500;
+  margin-top: 280px;
+  font-size: 19px;
+  margin-left: -20px;
+  letter-spacing: .1px;
+  margin-bottom: -300px;
+
+}
+
+/*
+.legendary-text-container {
+  position: relative;
+  background: yellow;
+  width: 100%;
+  display: flex;
+  z-index: 200;
+}
+
+.legendary-text {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  top: -300px;
+  justify-content: center;
+  left: -15%;
+}
+
+.legendary-text-word-container {
+  position: absolute;
+  display: flex;
+}
+
+.legendary-text-legendary-l {
+  font-size: 85px;
+  font-family: Kalam;
+  font-weight: bold;
+  background: linear-gradient(to top, rgb(255, 255, 255), rgb(53, 34, 104), rgb(235, 235, 235), rgb(255, 255, 255), rgb(136, 136, 238));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0;
+  margin: 0;
+  transform: rotate(8deg);
+  margin-left: -250px;
+}
+
+.legendary-text-legendary {
+  font-size: 85px;
+  font-family: Parisienne;
+  font-weight: bold;
+  background: linear-gradient(to top, rgb(255, 255, 255), rgb(53, 34, 104), rgb(235, 235, 235), rgb(255, 255, 255), rgb(136, 136, 238));
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.legendary-text-motorsport {
+  font-size: 30px;
+  font-family: Figtree;
+  font-style: italic;
+  font-weight: bold;
+  background: red;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0;
+  margin: 0;
+  margin-left: -220px;
+  margin-top: 80px;
+}
+
+<div class="legendary-text-container">
+        <div class="legendary-legendary">
+          <p class="legendary-legendary-l">L</p>
+          <p>egendary</p>
+        </div>
+        <div class="legendary-motorsport">
+          <p>Motorsport</p>
+        </div>
+
+
+*/

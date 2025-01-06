@@ -71,7 +71,7 @@ function renderSite(carFocus) {
       <div class="main-container-body">
         <div class="body-main">
           <div class="body-para">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis mi ac diam porttitor sodales. Donec eros odio, fringilla eget turpis sit amet, luctus finibus augue. Morbi feugiat tincidunt leo, non interdum mi venenatis cursus. Quisque eu vehicula nisl, sed sollicitudin enim. Vivamus facilisis rutrum posuere. Ut pulvinar convallis est eu fringilla. Curabitur auctor hendrerit nisl, ut consequat risus feugiat quis. Morbi fringilla velit in pharetra pharetra. Etiam eget viverra erat. Pellentesque nec lectus feugiat, rutrum sem quis, lobortis ipsum. Aenean in nunc sed justo accumsan dapibus. Duis ut posuere eros. Vestibulum facilisis velit eros. Fusce aliquet diam ac ipsum accumsan gravida. Maecenas suscipit porta semper. Etiam eu vulputate arcu.
+            ${carFocus.desc}
           </div>
           <div class="body-colors">
             <div class="colors-title">SELECT FROM AVAILABLE COLORS TO ORDER</div>
