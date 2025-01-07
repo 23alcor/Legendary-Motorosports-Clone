@@ -7,6 +7,11 @@ homeButton.addEventListener('click', () => {
   console.log('hello');
 });
 
+const backButton = document.querySelector('.js-back-button');
+backButton.addEventListener('click', () => {
+  window.location = 'index.html';
+  console.log('hello');
+});
 
 
 
