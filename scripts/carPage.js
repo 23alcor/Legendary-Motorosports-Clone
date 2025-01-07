@@ -1,6 +1,16 @@
 import { carList } from "./cars.js";
 
-const carFocus = JSON.parse(sessionStorage.getItem('carFocus'));
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get('carId');
+let carFocus;
+
+carList.forEach((carItem) => {
+  if (carItem.id == id) {
+    console.log(carItem.id);
+    carFocus = carItem;
+  }
+}); 
+
 
 //const carFocus = carList[0];
 
@@ -135,7 +145,6 @@ function renderSite(carFocus) {
 
   const orderButton = document.querySelector('.body-order-button');
   const colors = document.querySelectorAll('.color');
-  console.log(colors);
   colors.forEach((color) => {
     color.addEventListener('click', () => {
       audioSelect.currentTime = 0;

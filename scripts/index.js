@@ -119,16 +119,9 @@ function render(filterPick, carArray) {
     item.addEventListener(('click'), () => {
       //window.location = 'carPage.html';
       const id = item.dataset.id;
-      let car;
       console.log(id);
-      carList.forEach((carItem) => {
-        if (carItem.id == id) {
-          console.log(carItem.id);
-          car = carItem;
-        }
-      });
-      sessionStorage.setItem('carFocus', JSON.stringify(car));
-      window.location = 'carPage.html';
+      const url = `carPage.html?carId=${id}`;
+      window.location.href = url;
     });
   });
 } 
