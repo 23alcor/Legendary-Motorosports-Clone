@@ -32,7 +32,7 @@ buttonFilters.forEach((button) => {
   button.addEventListener('click', () => {
     // Reset sort by price
     priceButtonImage.classList.remove('selected');
-    priceButtonImage.src = '../images/icons/dash.webp'
+    priceButtonImage.src = 'images/icons/dash.webp'
 
     buttonFilters.forEach((btn) => {
       btn.classList.remove('selected');
